@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+
 public abstract class Activity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,7 +29,6 @@ public abstract class Activity extends AppCompatActivity {
      * 初始化窗口
      */
     protected void initWidows(){
-
     }
 
     /**

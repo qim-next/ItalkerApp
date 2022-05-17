@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public abstract class Fragment extends androidx.fragment.app.Fragment {
     protected View mRoot;
+    private Unbinder mRootUnBinder;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -54,7 +58,7 @@ public abstract class Fragment extends androidx.fragment.app.Fragment {
     protected abstract int getContentLayoutId();
 
     protected void initWidget(View root) {
-
+        mRootUnBinder = ButterKnife.bind(this, root);
     }
 
     protected void initData() {

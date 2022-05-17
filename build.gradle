@@ -15,5 +15,5 @@ ext{
 
     // 依赖库相关
     supportVersion = "1.3.0"
-
+    butterknifeVersion = "10.2.3"
 }
