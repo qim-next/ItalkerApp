@@ -17,7 +17,12 @@ public abstract class Activity extends AppCompatActivity {
 
         if(initArgs(getIntent().getExtras()))
         {
-            getContentLayoutId();
+            /**
+             * 获取界面ID并设置到Activity中
+             */
+            int layId = getContentLayoutId();
+            setContentView(layId);
+
             initWidget();
             initData();
         }else{
@@ -50,7 +55,7 @@ public abstract class Activity extends AppCompatActivity {
      * 初始化控件
      */
     protected void initWidget(){
-
+        ButterKnife.bind(this);
     }
 
     /**
